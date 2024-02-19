@@ -1,0 +1,552 @@
+/*1.*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto Sans TC:wght@400;500;800&family=Great+Vibes&family=Righteous&display=swap");
+
+@font-face {
+  font-family: RemachineScript;
+  src: url(/public/webfonts/RemachineScript.ttf);
+}
+
+@font-face {
+  font-family: SerandaniDemoRegular;
+  src: url(/public/webfonts/SerandaniDemoRegular.ttf);
+}
+
+/*2.*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 50;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+  display: flex;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 變數 */
+:root {
+  /* 灰階 */
+  --pink: #8a2be2;
+  --blue: #00008b;
+  --antiquewhite: #a52a2a;
+  --light: #ecfbff;
+  /* 主色調 */
+  --text-color: #492300;
+  --accent-color: #5f6d37;
+  --major-color: #bb6b25;
+  --major-color2: #8d521e;
+  --major-color3: #bc6c25;
+  --second-color: #dda25f;
+  /* 輔助色調 */
+  --bg-color1: #fffcf5;
+  --bg-color2: #fff8e4;
+  --lasser-color: #e0e0e0;
+  --a-color: rgba(252, 255, 232, 0.5);
+}
+
+/*3.網頁設計常用的設定，把原本的型態改掉*/
+* {
+  /*星號代表全域，全部領域*/
+  box-sizing: border-box;
+  /*不累加邊框和內距，間距還是會累加*/
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  /*修改預設值underline*/
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#gotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: var(--major-color);
+    border-radius: 50%;
+  
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  body {
+    font-family:
+      /*西文*/
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial,
+      /*中文*/
+      "蘋方-繁",
+      "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Noto Sans TC",
+      sans-serif;
+      background: var(--bg-color1);
+  }
+
+
+/* Filter */
+  #filter-second{
+  margin-top: 200px;
+  }
+  #filter-second h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+  #filter-second hr {
+    margin: 24px 100px 24px 90px;
+    width: 1750px;
+    opacity: 30%;
+  }
+  #filter-second .tag{
+    width: 1733px;
+    display: inline-flex;
+    margin: 0 100px 0 100px;  
+    /* justify-content: center; */
+  }
+  #filter-second .tag p{
+    margin: 0 36.5px 0 36.5px;
+    color: var(--accent-color);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+    align-items: center;
+    border:  2px solid var(--accent-color);
+    border-radius: 50px;
+    width: 160px;
+    height: 50px;
+  }
+  #filter-second .tag p:hover{
+    color: var(--bg-color1);
+    background-color: #5f6d37;
+    transition: all 0.35s;
+  }
+  
+
+  #restaurant{
+    margin-top: 100px;
+  }
+  
+  /* 第一家店 */
+  .restaurant1{
+      margin-top: 100px ;
+      gap: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 511px;
+      position: relative;
+  }
+  .restaurant1 .pur_egg2{
+    position: absolute;
+    width: 110px;
+    top: 100px; right: 100px;
+    opacity: 80%;
+    animation: pulse 0.5s infinite; /* 使用名为 pulse 的动画，持续时间为 2 秒，无限循环 */
+  }
+  @keyframes pulse {
+      0% {
+          transform: scale(1); /* 初始大小 */
+      }
+      50% {
+          transform: scale(2.2); /* 放大到 1.2 倍 */
+      }
+      100% {
+          transform: scale(1); /* 返回原始大小 */
+      }
+  }
+
+  .restaurant1 .pic1 {
+     margin-right: 100px;
+      width: 662px;
+      height: 511px;
+  }
+  .restaurant1 .oma-map img, .oma-phone img, .oma-time img{
+    margin-right: 5px;
+     width: 25px;
+     /* height: 28px; */
+ }
+  .text1 {
+      line-height: 30px;
+  }
+  .text1 h3{
+      line-height: 20px;
+      margin-bottom: 2vh;
+      font-size: 20px;
+      color: var(--major-color);
+  }
+  .text1 p{
+      font-size: 15px;
+      color: var(--text-color);
+  }
+  
+  /* 第二家店 */
+  .restaurant2{
+    margin-top: 100px;
+    gap: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 511px;
+    position: relative;
+  }
+  .restaurant2 .pur_soy2{
+    position: absolute;
+    width: 90px;
+    top: 100px; right: 100px;
+    opacity: 80%;
+    animation: rotateAnimation 1.1s ease-in-out infinite; /* 使用 ease-in-out 平滑过渡 */
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(1deg);
+    }
+    50% {
+      transform: rotate(-1deg); /* 在中间点完成一半的旋转 */
+    }
+    100% {
+      transform: rotate(1deg);
+    }
+  } 
+
+  .restaurant2 .pur_walnut2{
+    position: absolute;
+    width: 120px;
+    top: 390px; left: 380px;
+    opacity: 90%;
+    animation: pulse 0.5s infinite; /* 使用名为 pulse 的动画，持续时间为 2 秒，无限循环 */
+  }
+  @keyframes pulse {
+      0% {
+          transform: scale(1); /* 初始大小 */
+      }
+      50% {
+          transform: scale(2); /* 放大到 1.2 倍 */
+      }
+      100% {
+          transform: scale(1); /* 返回原始大小 */
+      }
+  }
+
+  .restaurant2 .safudo-map img, .safudo-phone img, .safudo-time img{
+    margin-right: 5px;
+     width: 25px;
+     /* height: 28px; */
+ }
+  .pic2 {
+    margin-right: 100px;
+    width: 662px;
+    height: 511px;
+  }
+  .text2{
+    line-height: 30px;
+  }
+  .text2 h3{
+    line-height: 20px;
+    margin-bottom: 2vh;
+    font-size: 20px;
+    color: var(--major-color);
+  }
+  .text2 p{
+    font-size: 15px;
+    color: var(--text-color);
+  }
+  
+  /* 第三家店 */
+  .restaurant3{
+    margin-top: 100px;
+    gap: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 511px;
+    position: relative;
+  }
+  .restaurant3 .pur_blueberry2{
+    position: absolute;
+    width: 170px;
+    top: 100px; right: 100px;
+    opacity: 80%;
+    animation: pulse 0.5s infinite; /* 使用名为 pulse 的动画，持续时间为 2 秒，无限循环 */
+  }
+  @keyframes pulse {
+      0% {
+          transform: scale(1); /* 初始大小 */
+      }
+      50% {
+          transform: scale(2); /* 放大到 1.2 倍 */
+      }
+      100% {
+          transform: scale(1); /* 返回原始大小 */
+      }
+  }
+
+  .restaurant3 .pur_cherry2{
+    position: absolute;
+    width: 170px;
+    top: 330px; left: 340px;
+    opacity: 95%;
+    animation: rotateAnimation 2s ease-in-out infinite; /* 使用 ease-in-out 平滑过渡 */
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(1deg);
+    }
+    50% {
+      transform: rotate(-1deg); /* 在中间点完成一半的旋转 */
+    }
+    100% {
+      transform: rotate(1deg);
+    }
+  } 
+
+  .restaurant3 .monecafe-map img, .monecafe-phone img, .monecafe-time img{
+    margin-right: 5px;
+     width: 25px;
+     /* height: 28px; */
+ }
+  .pic3 {
+   margin-right: 100px;
+    width: 662px;
+    height: 511px;
+  }
+  .text3{
+    line-height: 30px;
+  }
+  .text3 h3{
+    line-height: 20px;
+    margin-bottom: 2vh;
+    font-size: 20px;
+    color: var(--major-color);
+  }
+  .text3 p{
+    font-size: 15px;
+    color: var(--text-color);
+  }
+  
+  /* 第四家店 */
+  .restaurant4{
+    margin-top: 100px;
+    margin-bottom: 200px;
+    gap: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 511px;
+    position: relative;
+  }
+  .restaurant4 .pur_blackcherry2{
+    position: absolute;
+    width: 100px;
+    top: 50px; right: 70px;
+    opacity: 80%;
+    animation: rotateAnimation 1.5s ease-in-out infinite; /* 使用 ease-in-out 平滑过渡 */
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(1deg);
+    }
+    50% {
+      transform: rotate(-1deg); /* 在中间点完成一半的旋转 */
+    }
+    100% {
+      transform: rotate(1deg);
+    }
+  }
+
+  .restaurant4 .pur_single2{
+    position: absolute;
+    width: 120px;
+    top: 500px; left: 400px;
+    opacity: 95%;
+    animation: pulse 0.5s infinite; /* 使用名为 pulse 的动画，持续时间为 2 秒，无限循环 */
+  }
+  @keyframes pulse {
+      0% {
+          transform: scale(1); /* 初始大小 */
+      }
+      50% {
+          transform: scale(2.2); /* 放大到 1.2 倍 */
+      }
+      100% {
+          transform: scale(1); /* 返回原始大小 */
+      }
+  }
+
+  .restaurant4  .toast-phone img, .toast-time img, .toast-map img{
+    /* margin-right: 130px; */
+    width: 30px;
+    height: 28px;
+ }
+ .restaurant4  .toast-phone, .toast-time, .toast-map {
+    display: flex;
+ }
+  .pic4 {
+    margin-right: 100px;
+    width: 662px;
+    height: 511px;
+  }
+  .text4{
+    line-height: 30px;
+  }
+  .text4 h3{
+    line-height: 20px;
+    margin-bottom: 2vh;
+    font-size: 20px;
+    color: var(--major-color);
+  }
+  .text4 p{
+    font-size: 15px;
+    color: var(--text-color);
+  }
+
+  #restaurant .map1, .map2, .map3, .map4{
+    width: 90px; height: 30px;
+    font-size: 15px;
+    color: var(--text-color);
+    background-color: var(--bg-color1);
+    border-radius: 50px;
+    border-width: 1px;
+    margin-left: 30px;
+  }
+  #restaurant .map1:hover,
+  #restaurant .map2:hover,
+  #restaurant .map3:hover,
+  #restaurant .map4:hover{
+    color: var(--bg-color1);
+    background-color: var(--accent-color);
+  }
+  

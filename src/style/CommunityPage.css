@@ -1,0 +1,642 @@
+/*1.*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto Sans TC:wght@400;500;800&family=Great+Vibes&family=Righteous&display=swap");
+
+@font-face {
+  font-family: RemachineScript;
+  src: url(/public/webfonts/RemachineScript.ttf);
+}
+
+@font-face {
+  font-family: SerandaniDemoRegular;
+  src: url(/public/webfonts/SerandaniDemoRegular.ttf);
+}
+
+/*2.*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 50;
+  line-height: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px 0px;
+  justify-content: space-between;
+  color: rgba(221, 162, 95, 1);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 變數 */
+:root {
+  /* 灰階 */
+  --pink: #8a2be2;
+  --blue: #00008b;
+  --antiquewhite: #a52a2a;
+  --light: #ecfbff;
+  /* 主色調 */
+  --text-color: #492300;
+  --accent-color: #5f6d37;
+  --major-color: #bb6b25;
+  --major-color2: #8d521e;
+  --major-color3: #bc6c25;
+  --second-color: #dda25f;
+  /* 輔助色調 */
+  --bg-color1: #fffcf5;
+  --bg-color2: #fff8e4;
+  --lasser-color: #e0e0e0;
+  --a-color: rgba(252, 255, 232, 0.5);
+}
+
+/*3.網頁設計常用的設定，把原本的型態改掉*/
+* {
+  /*星號代表全域，全部領域*/
+  box-sizing: border-box;
+  /*不累加邊框和內距，間距還是會累加*/
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  /*修改預設值underline*/
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#gotop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  background-color: var(--major-color);
+  border-radius: 50%;
+
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 卷軸行為:滑動 */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+/*西文*/ -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, /*中文*/ "蘋方-繁",
+    "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Noto Sans TC",
+    sans-serif;
+}
+body {
+  background: var(--bg-color1);
+}
+
+/* .post_main{
+    margin-top: 100px;
+    margin-bottom: 2700px;
+} */
+/* Banner */
+.post_main .banner_com {
+  width: 1920px;
+  margin-top: 150px;
+}
+
+.post_main h1 {
+  color: var(--major-color2);
+  font-family: "Noto Sans TC";
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-left: 100px;
+  margin-top: 70px;
+}
+
+/* Filter_tag */
+.post_main .filter_tag {
+  display: flex;
+  /* gap: 20px; */
+  margin: 60px 80px 200px 80px;
+}
+/* first tag */
+.post_main .recipe {
+  position: relative;
+  width: 390px;
+  margin: 0 25px;
+}
+.recipe .soy_post1 {
+  position: absolute;
+  width: 85px;
+  top: -20px;
+  left: 15px;
+  z-index: 5;
+}
+.recipe .bg1 {
+  position: absolute;
+  top: 3px;
+  left: 55px;
+  z-index: 2;
+}
+.recipe .recipe_tag p {
+  position: absolute;
+  border: 1px solid var(--major-color);
+  background-color: var(--bg-color1);
+  color: var(--major-color);
+  margin: 0 30px;
+  font-size: 26px;
+  font-weight: 400;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  align-items: center;
+  border-radius: 30px;
+  width: 340px;
+  height: 90px;
+  z-index: 3;
+}
+.recipe:hover .recipe_tag p {
+    background-color: var(--second-color);
+    color: var(--bg-color1);
+    font-size: 28px;
+    font-weight: 500;
+}
+.recipe:hover .soy_post1{
+    width: 95px;
+    top: -35px;
+    rotate: 10deg;
+    transition: all 0.5s;
+}
+
+/* second tag */
+.post_main .ill {
+  position: relative;
+  width: 390px;
+  margin: 0 25px;
+}
+.ill .blue_post1 {
+  position: absolute;
+  width: 100px;
+  top: -15px;
+  left: 5px;
+  z-index: 5;
+}
+.ill .bg1 {
+  position: absolute;
+  top: 3px;
+  left: 55px;
+  z-index: 2;
+}
+.ill .ill_tag p {
+  position: absolute;
+  border: 1px solid var(--major-color);
+  background-color: var(--bg-color1);
+  color: var(--major-color);
+  margin: 0 30px;
+  font-size: 26px;
+  font-weight: 400;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  align-items: center;
+  border-radius: 30px;
+  width: 340px;
+  height: 90px;
+  z-index: 3;
+}
+.ill:hover .ill_tag p {
+    background-color: var(--second-color);
+    color: var(--bg-color1);
+    font-size: 28px;
+    font-weight: 500;
+}
+.ill:hover .blue_post1{
+    width: 113px;
+    top: -20px;
+    left: -8px;
+    rotate: -10deg;
+    transition: all 0.5s;
+}
+
+/* third tag  */
+.post_main .gluten {
+  position: relative;
+  width: 390px;
+  margin: 0 25px;
+}
+.gluten .cashew_post1 {
+  position: absolute;
+  width: 120px;
+  top: -30px;
+  left: 10px;
+  z-index: 5;
+}
+.gluten .bg1 {
+  position: absolute;
+  top: 3px;
+  left: 55px;
+  z-index: 2;
+}
+.gluten .gluten_tag p {
+  position: absolute;
+  border: 1px solid var(--major-color);
+  background-color: var(--bg-color1);
+  color: var(--major-color);
+  margin: 0 30px;
+  font-size: 26px;
+  font-weight: 400;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  align-items: center;
+  border-radius: 30px;
+  width: 340px;
+  height: 90px;
+  z-index: 3;
+}
+.gluten:hover .gluten_tag p {
+    background-color: var(--second-color);
+    color: var(--bg-color1);
+    font-size: 28px;
+    font-weight: 500;
+}
+.gluten:hover .cashew_post1{
+    width: 135px;
+    top: -43px;
+    left: 3px;
+    rotate: 10deg;
+    transition: all 0.5s;
+}
+
+/* Forth tag  */
+.post_main .gluten_eat {
+  position: relative;
+  width: 390px;
+  margin: 0 25px;
+}
+.gluten_eat .strawberry_post1 {
+  position: absolute;
+  width: 155px;
+  top: -25px;
+  left: -13px;
+  z-index: 5;
+}
+.gluten_eat .bg1 {
+  position: absolute;
+  top: 3px;
+  left: 55px;
+  z-index: 2;
+}
+.gluten_eat .gluteneat_tag p {
+  position: absolute;
+  border: 1px solid var(--major-color);
+  background-color: var(--bg-color1);
+  color: var(--major-color);
+  margin: 0 30px;
+  font-size: 26px;
+  font-weight: 400;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  align-items: center;
+  border-radius: 30px;
+  width: 340px;
+  height: 90px;
+  z-index: 3;
+}
+.gluten_eat:hover .gluteneat_tag p {
+    background-color: var(--second-color);
+    color: var(--bg-color1);
+    font-size: 28px;
+    font-weight: 500;
+}
+.gluten_eat:hover .strawberry_post1{
+    width: 175px;
+    top: -37px;
+    left: -30px;
+    rotate: 5deg;
+    transition: all 0.5s;
+}
+
+/* Posts */
+.posts{
+    margin: 100px 100px;
+    margin-bottom: 2770px;
+}
+
+/* line1 */
+.line1{
+    position: relative;
+    gap: 58px;
+    display: flex;
+}
+.line1 .add .rice_add{
+    position: absolute;
+    width: 210px;
+    top: 0px;
+    left: 350px;
+    z-index: 3;
+}
+.line1 .add .add_bottom{
+    position: absolute;
+    width: 130px;
+    top: 200px;
+    left: 200px;
+    z-index: 2;
+}
+.line1 .add .add_bg{
+    width: 540px;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.line1 .post1{
+    width: 540px;
+}
+.line1 .post2{
+    position: relative;
+    width: 540px;
+}
+.line1 .post2 .blues_post1{
+    position: absolute;
+    width: 170px;
+    top: 140px;
+    right: 0;
+}
+.line1:hover .rice_add{
+    rotate: 10deg;
+    width: 250px;
+    transition: all 0.5s;
+}
+.line1:hover .add_bottom{
+    width: 140px;
+    transition: all 0.5s;
+}
+
+/* line2 */
+.line2{
+    position: relative;
+    gap: 58px;
+    display: flex;
+}
+.line2 .post3{
+    position: absolute;
+    top: -35px;
+    width: 540px;
+}
+.line2 .post4{
+    position: absolute;
+    top: 20px;
+    left: 298px;
+    width: 540px;
+}
+.line2 .post5{
+    position: absolute;
+    top: 20px;
+    left: 598px;
+    width: 540px;
+}
+
+/* line3 */
+.line3{
+    position: relative;
+    gap: 58px;
+    display: flex;
+}
+.line3 .post6{
+    position: absolute;
+    top: 335px;
+    width: 540px;
+}
+.line3 .post7{
+    position: absolute;
+    top: 382px;
+    left: 298px;
+    width: 540px;
+}
+.line3 .post8{
+    position: absolute;
+    top: 335px;
+    left: 598px;
+    width: 540px;
+}
+
+/* line4 */
+.line4{
+    position: relative;
+    gap: 58px;
+    display: flex;
+}
+.line4 .post9{
+    position: absolute;
+    top: 698px;
+    width: 540px;
+}
+.line4 .post10{
+    position: absolute;
+    top: 698px;
+    left: 298px;
+    width: 540px;
+}
+.line4 .post10 .post_cherry1{
+    position: absolute;
+    top: 750px;
+    left: 730px;
+    width: 130px;
+    z-index: 3;
+}
+.line4 .post11{
+    position: absolute;
+    top: 698px;
+    left: 598px;
+    width: 540px;
+}
+
+/* line5 */
+.line5{
+    position: relative;
+    gap: 58px;
+    display: flex;
+}
+.line5 .post12{
+    position: absolute;
+    top: 1013px;
+    width: 540px;
+}
+.line5 .post12 .post_egg1{
+    position: absolute;
+    width: 130px;
+    top: 915px;
+    left: -50px;
+    z-index: 3;
+}
+.line5 .post13{
+    position: absolute;
+    top: 1063px;
+    left: 298px;
+    width: 540px;
+}
+.line5 .post14{
+    position: absolute;
+    top: 1013px;
+    left: 598px;
+    width: 540px;
+}
+
+.moreshare-btn{
+    margin-bottom: 70px;
+}
+.moreshare-btn p{
+    margin: auto;
+    position: relative;
+    width: 298px;
+    height: 70px;
+    color: var(--bg-color1);
+    background-color: var(--accent-color);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 22px;
+    border-radius: 50px;
+}
+.moreshare-btn p:hover{
+    background-color: var(--major-color3);
+}
+

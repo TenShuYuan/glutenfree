@@ -1,0 +1,74 @@
+footer {
+    /* line-height: 50px; 行高設定跟高度一樣可垂直置中 */
+    text-align: center;
+    height: 170px;
+    background-color: var(--bg-color2);
+    color: var(--second-color);
+    padding: 20px 110px 50px 80px;
+  }
+  
+  /* 有最上面的NAV，最下方的FOOTER就不用加，下面的是做練習做的 */
+  footer nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  footer .menu {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  footer .menu a {
+    color: var(--major-color);
+  }
+  
+  footer .menu a::after {
+    content: "";
+    /* 沒內容也一定要寫上CONTENT這個屬性 */
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 3px;
+    background-color: var(--major-color);
+  }
+  
+  footer .menu a:hover::after {
+    width: 100%;
+    transition: 0.35s;
+  }
+  
+  @media (max-width: 640px) {
+    footer nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    footer .menu {
+      flex-direction: column;
+    }
+  }
+  
+  /* .btn_fb {
+    background-image: url("../images/icon-fb.svg");
+  }
+  
+  .btn_ig {
+    background-image: url("../images/icon-ig.svg");
+  }
+  
+  .btn_line {
+    background-image: url("../images/icon-line.svg");
+  }
+  
+  .btn_fb:hover {
+    background-image: url("../images/icon-fb-hover.svg");
+  }
+  
+  .btn_ig:hover {
+    background-image: url("../images/icon-ig-hover.svg");
+  }
+  
+  .btn_line:hover {
+    background-image: url("../images/icon-line-hover.svg");
+  } */

@@ -1,0 +1,398 @@
+/*1.*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto Sans TC:wght@400;500;800&family=Great+Vibes&family=Righteous&display=swap");
+
+@font-face {
+    font-family: RemachineScript;
+    src: url(/public/webfonts/RemachineScript.ttf);
+}
+
+@font-face {
+    font-family: SerandaniDemoRegular;
+    src: url(/public/webfonts/SerandaniDemoRegular.ttf);
+}
+
+/*2.*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    margin: 50;
+    line-height: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 0px;
+    justify-content: space-between;
+    color: rgba(221, 162, 95, 1);
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 變數 */
+:root {
+    /* 灰階 */
+    --pink: #8a2be2;
+    --blue: #00008b;
+    --antiquewhite: #a52a2a;
+    --light: #ecfbff;
+    /* 主色調 */
+    --text-color: #492300;
+    --accent-color: #5f6d37;
+    --major-color: #bb6b25;
+    --major-color2: #8d521e;
+    --major-color3: #bc6c25;
+    --second-color: #dda25f;
+    /* 輔助色調 */
+    --bg-color1: #fffcf5;
+    --bg-color2: #fff8e4;
+    --lasser-color: #e0e0e0;
+    --a-color: rgba(252, 255, 232, 0.5);
+}
+
+/*3.網頁設計常用的設定，把原本的型態改掉*/
+* {
+    /*星號代表全域，全部領域*/
+    box-sizing: border-box;
+    /*不累加邊框和內距，間距還是會累加*/
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    /*修改預設值underline*/
+}
+
+img {
+    display: block;
+    width: 262;
+}
+
+#gotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: var(--major-color);
+    border-radius: 50%;
+
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 卷軸行為:滑動 */
+/* html,body{
+	scroll-behavior: smooth;
+} */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁",
+        "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Noto Sans TC",
+        sans-serif;
+}
+/* Filter */
+#filter-main{
+    margin-top: 200px;
+}
+#filter-main h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+#filter-main hr {
+    margin: 24px 100px 24px 100px;
+    width: 1750px;
+    opacity: 30%;
+}
+#filter-main .tag{
+    width: 1733px;
+    display: inline-flex;
+    margin: 0 100px 0 100px;  
+    /* justify-content: center; */
+}
+#filter-main .tag p{
+    margin: 0 30px 0 30px;
+    color: var(--accent-color);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+    align-items: center;
+    border:  2px solid var(--accent-color);
+    border-radius: 50px;
+	width: 160px;
+	height: 50px;
+}
+#filter-main .tag p:hover{
+    color: var(--bg-color1);
+    background-color: #5f6d37;
+    transition: all 0.35s;
+}
+
+
+#products-main{
+    /* height: 200vh; */
+    margin-top: 100px;
+}
+
+#products-main .popular .part1{
+    position: relative;
+    width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    /* gap: 100px; */
+    /* margin: 26px 100px 115px 100px; */
+    display: flex;
+    justify-content:space-between;
+    /* width: 262px; */
+    /* border: 1px solid red; */
+}
+
+/* .popular .part1 .buttonbuy{
+    position: absolute;
+    width: 123px;
+    top: 266px;
+    right: 24px;
+} */
+#products-main h1{
+    color: var(--major-color2);
+    font-family: 'Noto Sans TC';
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* padding-left: 100px; */
+}
+.title1{
+    display: flex;
+    margin-bottom: 20px;
+    padding-left: 100px;
+}
+#products-main .title1{
+    display: flex;
+    align-items: center;
+}
+.title1 p{
+    font-size: 18px;
+    color: var(--major-color3);
+    margin: 0 10px 0 10px;
+}
+.title1 img{
+    width: 20px;
+    margin: 5px;
+}
+/* #products .part1 img{
+    box-shadow: 3px 3px 3px 2px rgba(212, 212, 212, 0.671);;
+} */
+
+/* .selected .title2{
+    display:flex ;
+} */
+
+.selected{
+    display: inline-block;
+}
+#products-main .selected .part2{
+    gap: 100px;
+    margin: 26px 100px 142px 100px;
+    display: flex;
+    width: 262px;
+}
+.part3{
+    gap: 100px;
+    margin: -80px 100px 142px 100px;
+    display: flex;
+    width: 262px;
+}
+.part4{
+    gap: 100px;
+    margin: -80px 100px 142px 100px;
+    display: flex;
+    width: 262px;
+}
+.part5{
+    gap: 100px;
+    margin: -80px 100px 142px 100px;
+    display: flex;
+    width: 262px;
+}
+
+/* .title2{
+    display: flex;
+} */
+.selected .title2{
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+.title2 p{
+    font-size: 18px;
+    color: var(--major-color3);
+    margin: 0 10px 0 10px;
+}
+.title2 img{
+    width: 20px;
+    margin: 5px;
+}
+/* .title2 h1{
+    padding-left: 100px;
+} */
+
+
+span {
+  height: 15px;
+  width: 15px;
+  background-color: #cacaca;
+  border-radius: 100%;
+  display: inline-flex;
+}
+
+/* .dots{
+    color: #cacaca;
+    position: absolute;
+    text-align:center;
+    margin-left: 58rem;
+    margin-top: -100px;
+    display: inline;
+}
+.dots :hover{
+    color: var(--major-color);
+} */
+
+#products-main h1{
+    font-family:  'Noto Sans TC';
+}

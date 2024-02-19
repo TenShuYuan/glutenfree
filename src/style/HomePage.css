@@ -1,0 +1,866 @@
+/*1.*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto Sans TC:wght@400;500;800&family=Great+Vibes&family=Righteous&display=swap");
+
+@font-face {
+  font-family: RemachineScript;
+  src: url(/public/webfonts/RemachineScript.ttf);
+}
+@font-face {
+  font-family: SerandaniDemoRegular;
+  src: url(/public/webfonts/SerandaniDemoRegular.ttf);
+}
+
+/*2.*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 50;
+  line-height: 1;
+  background: var(--bg-color1);
+}
+
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px 0px;
+  justify-content: space-between;
+  color: rgba(221, 162, 95, 1);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 變數 */
+:root {
+  /* 灰階 */
+  --pink: #8a2be2;
+  --blue: #00008b;
+  --antiquewhite: #a52a2a;
+  --light: #ecfbff;
+  /* 主色調 */
+  --text-color: #492300;
+  --accent-color: #5f6d37;
+  --major-color: #bb6b25;
+  --major-color2: #8d521e;
+  --major-color3: #bc6c25;
+  --second-color: #dda25f;
+  /* 輔助色調 */
+  --bg-color1: #fffcf5;
+  --bg-color2: #fff8e4;
+  --lasser-color: #e0e0e0;
+  --a-color: rgba(252, 255, 232, 0.5);
+}
+
+/*3.網頁設計常用的設定，把原本的型態改掉*/
+* {
+  /*星號代表全域，全部領域*/
+  box-sizing: border-box;
+  /*不累加邊框和內距，間距還是會累加*/
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  /*修改預設值underline*/
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+#gotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: var(--major-color);
+    border-radius: 50%;
+  
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* 卷軸行為:滑動 */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family:
+      /*西文*/
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial,
+      /*中文*/
+      "蘋方-繁",
+      "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Noto Sans TC",
+      sans-serif;
+  
+    background: var(--bg-color1);
+  }
+  .menu img {
+    width: 30px;
+    display: flex;
+  }
+
+  #banner .content-slider figure img{
+    margin: auto;
+    margin-top: 0px;
+    width: 1400px;
+    height: 930px;
+    transform: scale(1.1);
+    /* justify-content: center; */
+    }  
+
+
+  /* 主要內容區 */
+  #aboutus .title{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    color: var(--major-color2);
+    font-weight: 500;
+  }
+  #aboutus .title img{
+    width: 20px;
+    margin: 5px;
+  }
+  
+  .aboutus-avocado {
+    position: absolute;
+    width: 70px;
+    height: 106px;
+    left: 300px;
+    top: 1150px;
+    /* 2秒完成一次旋转，线性变化，无限循环 */
+    animation: rotateAnimation 0.5s ease-in-out infinite; 
+  }
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(4deg);
+    }
+    100% {
+      transform: rotate(-4deg);
+    }
+  }
+  
+  .aboutus-cashew {
+    position: absolute;
+    width: 100px;
+    /* height: 88px; */
+    left: 1470px;
+    top: 1150px;
+    animation: rotateAnimation 0.5s ease-in-out infinite; 
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+    100% {
+      transform: rotate(-3deg);
+    }
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    /* 主軸:垂直 */
+    justify-content: center;
+    /* 主軸:(置中)垂直 */
+    align-items: center;
+    /* 副軸(水平)置中 */
+    /* height: 70vh; */
+    /* 自動抓取視窗高度 */
+  }
+  
+  
+  .title {
+    /* border: solid red 1px; */
+    font-family: "Noto Sans TC", cursive;
+    font-size: 1.5rem;
+    font-weight: 300;
+    /* border-top: solid 8px var(--major-color); */
+    margin-bottom: -30px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: -30px;
+  }
+ 
+  .list-box {
+    width: 80%;
+    display: flex;
+  }
+  
+  .list-item {
+    flex: 1;
+    margin: 0 10px;
+    /* 用flex:1 搭配margin 給間距 */
+    height: 65vh;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .list-item p {
+    font-family: SerandaniDemoRegular, sans-serif;
+  }
+  
+  /* 三大服務 */
+  #threeimages .title {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    color: var(--major-color2);
+    font-weight: 500;
+  }
+  #threeimages .title img{
+    width: 25px;
+    margin: 5px;
+  }
+  
+  #threeimages .image {
+    display: flex;
+    /* height: 70vh; */
+    margin-top: 8vh;
+    margin-bottom: 80px;
+    align-items: center;
+    gap: 8vh;
+  }
+  
+  #threeimages .image img {
+    /* width: 50%; */
+    margin: 5px 5px 0 5px;
+    align-items: center;
+  }
+  
+  #threeimages .image h4 {
+    z-index: 999;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--major-color);
+  }
+  
+  /* 麩質教室快捷鍵區 */
+  /* .path-egg {
+    position: absolute;
+    width: 160px;
+    left: 200px;
+    top: 2700px;
+    z-index: 4;
+  } */
+  /* .path-cashew {
+  -moz-transform:scaleX(-1);
+  -webkit-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1) rotate(15deg);
+    position: absolute;
+    width: 130px;
+    right: 350px;
+    top: 2200px;
+    z-index: 4;
+  } */
+  
+  /* #aboutgluten-path { */
+    /* border: #a52a2a solid; */
+    /* width: 1040px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  } */
+  
+  /* #aboutgluten-path .title {
+    color: var(--major-color2);
+    padding-top: 3rem;
+    font-weight: 500;
+    display: flex;
+  } */
+  /* #aboutgluten-path .title img{
+    width: 20px;
+    margin: 5px;
+  } */
+  /* #aboutgluten-path .top {
+    display: flex;
+    padding: 5rem 0rem 1.8rem 0rem;
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    z-index: 2;
+  } */
+  
+  /* #aboutgluten-path .top1 p {
+    position: absolute;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    top: 152rem;
+    width: 581px;
+    height: 76px;
+    color: var(--bg-color2); */
+    /* border: #8a2be2 solid; */
+  /* } */
+  
+  /* #aboutgluten-path .top2 p {
+    position: absolute;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    top: 152rem;
+    width: 434px;
+    height: 76px;
+    color: var(--bg-color2); */
+    /* border: #8a2be2 solid; */
+  /* } */
+  
+  /* #aboutgluten-path .bottom {
+    padding: 0rem 0rem 0rem 0rem;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20vh;
+    gap: 25px;
+    z-index: 2;
+  } */
+  
+  /* #aboutgluten-path .bottom1 p {
+    position: absolute;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    top: 176.5rem;
+    width: 29.4rem;
+    height: 76px;
+    color: var(--bg-color2);
+    /* border: #00ff33 solid; */
+  /* } */
+  
+  /* #aboutgluten-path .bottom2 p {
+    position: absolute;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    top: 176.5rem;
+    width: 34.2rem;
+    height: 76px;
+    color: var(--bg-color2);
+     border: #00ff33 solid; 
+  } */
+  
+  /* .square-block {
+    position: absolute;
+    width: 387px;
+    height: 353px;
+    left: 300px;
+    top: 2100px;
+    z-index: 1;
+  } */
+  
+  /* .round-block {
+    position: absolute;
+    width: 387px;
+    height: 468px;
+    right: 250px;
+    top: 2680px;
+    z-index: 1;
+  } */
+  
+  #aboutus p {
+    text-align: justify;
+    /*(換行)中文用比較好*/
+    display: block;
+    margin-top: 0%;
+    padding: 60px;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    width: 100vh;
+    /* margin-bottom: 20px; */
+    /* 多行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 可省略，為瀏覽器預設值 */
+  
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    color: #492300;
+  }
+  
+  @media (max-width: 768px
+    /*平板的像素*/
+  ) {
+    .menu-aboutgluten .list-item:last-child {
+      display: none;
+    }
+  
+    .menu-aboutgluten p {
+      -webkit-line-clamp: 9;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .menu-aboutgluten .list-item:nth-child(n + 2) {
+      display: none;
+    }
+  
+    .menu-aboutgluten p {
+      -webkit-line-clamp: 6;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* #aboutgluten h3, #aboutgluten p{} */
+  .list-item h3,
+  .list-item p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  /*#aboutgluten h3{}*/
+  .list-item h3 {
+    font-family: RemachineScript;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .list-item p {
+    /*text-align: justify (換行)用中文比較好;*/
+    line-height: 1.3rem;
+    font-family: SerandaniDemoRegular, sans-serif;
+    text-align: justify;
+  }
+  
+  #recipe p {
+    /*單行省略*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*父元素也要定義overglow:hidden*/
+  }
+  
+  /* #aboutgluten p{} */
+  .list-item p {
+    font-family: SerandaniDemoRegular, sans-serif;
+    text-align: justify;
+    line-height: 1.2rem;
+  
+    /* 多行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*可省略，為瀏覽器預設值*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+  }
+  
+  #recipe {
+    background-color: var(--bg-color2);
+  }
+  
+  #recipe .list-item {
+    display: flex;
+    /*主軸預設為水平*/
+    align-items: flex-end;
+    /*副軸(垂直)置底*/
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #recipe .list-item a {
+    background: var(--bg-color2);
+    /* padding: 20px */
+    color: var(--text-color);
+  }
+  
+  @media (max-width: 768px) {
+    #recipe .list-box {
+      flex-direction: column;
+    }
+  
+    #recipe .list-item {
+      flex: none;
+      height: 35vh;
+      margin: 20px 0;
+    }
+  
+    #recipe .list-item:nth-child(n + 3) {
+      display: none;
+    }
+  }
+  
+  #community {
+    position: relative;
+    /* background-color: var(--major-color); */
+  }
+  
+  #community .contain {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /*主軸方向(垂直)*/
+    justify-content: center;
+    /*主軸方向(垂直):置中*/
+    align-items: center;
+    /*副軸(水平)方向:置中*/
+  
+    width: 65%;
+    height: 100vh;
+    background-color: var(--bg-color1);
+    padding: 30px;
+  }
+  
+  /* Add css 2024.02.05 */
+  #banner {
+    margin-top: 0px;
+  }
+  #banner .content-slider img{
+    /* border: #aaa0a0 solid 2px ; */
+    /* position: relative;  */
+    margin: auto;
+    width: 1300px;
+    height: 900px;
+  }
+
+  #threeimages ul{
+    display: flex;
+    justify-content: center;
+  }
+  #threeimages .title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans TC';
+  }
+
+  #aboutus .title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans TC';
+  }
+  #aboutus .aboutus-content{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  }
+  #aboutus .aboutus-content .aboutus-avocado{
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: 348px;
+  top: 50px;
+  -moz-transform:scaleX(-1);
+  -webkit-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1);
+  }
+  #aboutus .aboutus-content .aboutus-cashew{
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: 1500px;
+  top:80px;
+  -moz-transform:scaleX(-1);
+  -webkit-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1) rotate(-7deg);
+  }
+
+  /* 無麩質教室快捷鍵區 */
+  #aboutgluten-path{
+    margin-top: 200px;
+    margin-bottom: 150px;
+    /* border: #64eaff solid 1px; */
+  }
+
+  /* 主標題 */
+  #aboutgluten-path .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  #aboutgluten-path .title h2{
+  font-family: 'Noto Sans TC';
+    font-weight: 500;
+    color: var(--major-color2);
+  }
+  /* 主標兩旁的Icon */
+  #aboutgluten-path .title img{
+    width: 25px;
+    margin: 5px;
+  }
+  #aboutgluten-path .top, .bottom{
+    /* border: #8a2be2 1px solid; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  #aboutgluten-path .top1, .top2, .bottom1, .bottom2{
+    position: relative;
+    /* border: #00ff33 solid 1px; */
+    z-index: 9;
+    cursor: pointer;
+  }
+  #aboutgluten-path .top1, .bottom1{
+    padding-right: 15px;
+  }
+  #aboutgluten-path .top2, .bottom2{
+    padding-left: 15px;
+  }
+  
+
+  /* 副標題 */
+  #aboutgluten-path .top1 p{
+  position: absolute;
+  padding-left: 40px;
+  top: 290px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bg-color1);
+  z-index: 9;
+  } 
+  #aboutgluten-path .top2 p{
+  position: absolute;
+  padding-left: 40px;
+  top: 290px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--bg-color1);
+  z-index: 9;
+}
+  #aboutgluten-path .bottom1 p{ 
+    position: absolute;
+    padding-left: 40px;
+    top: 290px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--bg-color1);
+    z-index: 9;
+  }
+  #aboutgluten-path .bottom2 p {
+    position: absolute;
+    padding-left: 40px;
+    top: 290px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--bg-color1);
+    z-index: 9;
+    }
+    .toppic1, .toppic2 .bottompic1, .bottompic2{
+      z-index: 9;
+      /* 水平偏移量 垂直偏移量 模糊半径 阴影颜色 */
+      /* box-shadow: 0px 4px 8px rgba(79, 70, 53, 0.284);  */
+    }
+    
+  /* 色塊＆圖形 */
+  #aboutgluten-path .top1 .square-block{
+    width: 370px;
+    position: absolute;
+    top: -110px;
+    left: -130px;
+    z-index: -1;
+  }
+  #aboutgluten-path .bottom2 .round-block{
+    width: 460px;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    z-index: -1;
+  }
+  #aboutgluten-path .path-egg{
+    width: 143px;
+    position: absolute;
+    top: 250px;
+    right: 530px;
+    z-index: 7;
+    animation:pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* 初始大小 */
+  }
+  50% {
+      transform: scale(0.95); /* 放大到 1.2 倍 */
+  }
+  100% {
+      transform: scale(1); /* 返回原始大小 */
+  }
+}
+
+  #aboutgluten-path .path-bluberry{
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 1075px;
+    z-index: 7;
+    animation:rotateAnimation 1s ease-in-out infinite;;
+  }
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(-1deg);
+    }
+    50% {
+      transform: rotate(1deg);
+    }
+    100% {
+      transform: rotate(-1deg);
+    }
+  }
+
+  #aboutgluten-path .top1 p:hover {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#aboutgluten-path .top2 p:hover {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#aboutgluten-path .bottom1 p:hover {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#aboutgluten-path .bottom2 p:hover {
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}

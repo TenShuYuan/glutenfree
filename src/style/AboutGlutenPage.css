@@ -1,0 +1,318 @@
+/*1.*/
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto Sans TC:wght@400;500;800&family=Great+Vibes&family=Righteous&display=swap");
+
+@font-face {
+  font-family: RemachineScript;
+  src: url(/public/webfonts/RemachineScript.ttf);
+}
+
+@font-face {
+  font-family: SerandaniDemoRegular;
+  src: url(/public/webfonts/SerandaniDemoRegular.ttf);
+}
+
+/*2.*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  /* height: 100vh; */
+  line-height: 1;
+  background: var(--bg-color1);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px 0px;
+  justify-content: space-between;
+  color: rgba(221, 162, 95, 1);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 變數 */
+:root {
+  /* 灰階 */
+  --pink: #8a2be2;
+  --blue: #00008b;
+  --antiquewhite: #a52a2a;
+  --light: #ecfbff;
+  /* 主色調 */
+  --text-color: #492300;
+  --accent-color: #5f6d37;
+  --major-color: #bb6b25;
+  --major-color2: #8d521e;
+  --major-color3: #bc6c25;
+  --second-color: #dda25f;
+  /* 輔助色調 */
+  --bg-color1: #fffcf5;
+  --bg-color2: #fff8e4;
+  --lasser-color: #e0e0e0;
+  --a-color: rgba(252, 255, 232, 0.5);
+}
+
+/*3.網頁設計常用的設定，把原本的型態改掉*/
+* {
+  /*星號代表全域，全部領域*/
+  box-sizing: border-box;
+  /*不累加邊框和內距，間距還是會累加*/
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  /*修改預設值underline*/
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+#gotop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  background-color: var(--major-color);
+  border-radius: 50%;
+
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 卷軸行為:滑動 */
+/* html,body{
+	scroll-behavior: smooth;
+} */
+body {
+  font-family:
+    /*西文*/
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    /*中文*/
+    "蘋方-繁",
+    "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Noto Sans TC",
+    sans-serif;
+}
+
+.pattern{
+  background-image: url('./images/yampattern.png');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 40%;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+/* 主要內容區 */
+  #comic {
+    margin-top: 150px;
+    margin-bottom: 750px;
+    /* position: relative; */
+  }
+  #comic .line2{
+ width: 1700px;
+ height: 15px;
+ margin: auto;
+  }
+  #comic .comic-title{
+    padding-top: 20px;
+    padding-bottom: 60px;
+    width: 350px;
+    margin: auto;
+  }
+  .whats-gluten{
+    position: relative;
+  }
+  #comic .part1 {
+    position: absolute;
+    width: 960px;
+    height: 460px;
+    margin-left: 100px;
+    z-index: 3;
+  }
+  
+  #comic .talk1 {
+    position: absolute;
+    width: 413px;
+    height: 149px;
+    top: 100px;
+    left: 550px;
+    z-index: 4;
+  }
+  
+  #comic .part2 {
+    position: absolute;
+    width: 1500px;
+    top: 271px;
+    margin-left: 330px;
+    z-index: 1;
+  }
+  
+  #comic .talk2 {
+    position: absolute;
+    width: 909px;
+    top: 397px;
+    left: 500px;
+    z-index: 4;
+  }
+  
+  #comic .part3 {
+    position: relative;
+    width: 1733px;
+    top: 752px;
+    margin: auto;
+    /* align-items: center; */
+    z-index: 1;
+  }
+  
+  #comic .talk3 {
+    position: absolute;
+    width: 677px;
+    top: 980px;
+    left: 530px;
+    z-index: 4;
+  }
+  
+  #comic .part4 {
+    position: absolute;
+    width: 490px;
+    top: 1070px;
+    left: 1260px;
+    z-index: 5;
+  }
